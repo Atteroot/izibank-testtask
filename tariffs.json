@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Name",
+    "id": 1,
+    "title": "% ставка",
+    "description": "3,08% в місяць",
+    "category": "other",
+    "footer": "в місяць (пільгова % ставка 0,0001%)"
+  },
+  {
+    "name": "Name",
+    "id": 2,
+    "title": "кредитний ліміт",
+    "description": "до 200 000 ₴",
+    "category": "other",
+    "footer": ""
+  },
+  {
+    "name": "Name",
+    "id": 3,
+    "title": "пільговий період",
+    "description": "до 62 днів",
+    "category": "other",
+    "footer": ""
+  },
+  {
+    "name": "Name",
+    "id": 4,
+    "title": "обовʼязковий мінімальний платіж",
+    "description": "5%",
+    "category": "refill",
+    "footer": "від суми кредиту, але не менше 100 ₴"
+  },
+  {
+    "name": "Name",
+    "id": 5,
+    "title": "кешбек",
+    "description": "% на вибір",
+    "category": "other",
+    "footer": "1% на всі покупки + 2% п’ятничний або щомісяця підвищений % на нові категорії"
+  },
+  {
+    "name": "Name",
+    "id": 6,
+    "title": "оплата комуналки",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": "в тому числі за рахунок кредитних коштів"
+  },
+  {
+    "name": "Name",
+    "id": 7,
+    "title": "поповнення мобільного",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": ""
+  },
+  {
+    "name": "Name",
+    "id": 8,
+    "title": "переказ з картки на картку",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": "власні кошти кредитні кошти — 4%"
+  },
+  {
+    "name": "Name",
+    "id": 9,
+    "title": "валютообмін",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": "власні кошти кредитні кошти — 4%"
+  },
+  {
+    "name": "Name",
+    "id": 10,
+    "title": "зняття готівки в банкоматах",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": "власні кошти (в мережі Таскомбанк) \\n 4,9% кредитні кошти"
+  },
+  {
+    "name": "Name",
+    "id": 11,
+    "title": "переказ за реквізитами",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": "власні кошти (до 10 000 ₴) кредитні кошти 2%"
+  },
+  {
+    "name": "Name",
+    "id": 12,
+    "title": "тип картки",
+    "description": "MasterCard World Contactless",
+    "category": "other",
+    "footer": "власні кошти"
+  },
+  {
+    "name": "Name",
+    "id": 13,
+    "title": "поповнення картки",
+    "description": "безкоштовно",
+    "category": "refill",
+    "footer": ""
+  },
+  {
+    "name": "Name",
+    "id": 14,
+    "title": "оформлення та обслуговування",
+    "description": "безкоштовно",
+    "category": "registration",
+    "footer": ""
+  },
+  {
+    "name": "Name",
+    "id": 15,
+    "title": "оформлення віртуальної картки",
+    "description": "безкоштовно",
+    "category": "registration",
+    "footer": "гривня ₴ долар $ євро €"
+  }
+]

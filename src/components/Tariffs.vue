@@ -1,18 +1,20 @@
 <template>
   <div class="tariffs_table">
-    <div
-      v-for="tariff in filterTariffs"
-      :key="tariff.id"
-      class="tariffs_table__card"
-    >
-      <div class="tariffs_table__card-description">
-        <p class="card-description__title">{{ tariff.title }}</p>
-        <p class="card-description__description">{{ tariff.description }}</p>
+    <transition-group name="cards">
+      <div
+        v-for="tariff in filterTariffs"
+        :key="tariff.id"
+        class="tariffs_table__card"
+      >
+        <div class="tariffs_table__card-description">
+          <p class="card-description__title">{{ tariff.title }}</p>
+          <p class="card-description__description">{{ tariff.description }}</p>
+        </div>
+        <div class="tariffs_table__card-footer">
+          <p>{{ tariff.footer }}</p>
+        </div>
       </div>
-      <div class="tariffs_table__card-footer">
-        <p>{{ tariff.footer }}</p>
-      </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -52,8 +54,10 @@ export default {
   },
 
   async created() {
-    const response = await fetch('../tariffs.json')
-    const data = await response.json();
+    const response = await fetch('./tariffs.json');
+    console.log(response);
+    const data = await response.json()
+    console.log(data);
     data.map(el => this.tariffs.push(el))
   }
 }
@@ -103,5 +107,15 @@ export default {
    font-size: 16px;
    font-weight: 18px;
    margin-top: auto;
+ }
+
+ .cards-enter-active,
+ .cards-leave-active {
+   transition: all 1s;
+ }
+
+ .cards-enter,
+ .cards-leave-to {
+   opacity: 0;
  }
 </style>

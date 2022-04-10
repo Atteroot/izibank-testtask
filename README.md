@@ -1,6 +1,6 @@
 # test-task
 
-Previev:
+Preview: https://atteroot.github.io/izibank-testtask/
 
 ## Recommended IDE Setup
 

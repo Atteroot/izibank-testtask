@@ -1,6 +1,6 @@
 # test-task
 
-This template should help get you started developing with Vue 3 in Vite.
+Preview: https://atteroot.github.io/izibank-testtask/
 
 ## Recommended IDE Setup
 

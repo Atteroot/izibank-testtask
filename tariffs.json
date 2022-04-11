@@ -118,5 +118,13 @@
     "description": "безкоштовно",
     "category": "registration",
     "footer": "гривня ₴ долар $ євро €"
+  },
+  {
+    "name": "Name",
+    "id": 15,
+    "title": "оформлення віртуальної картки",
+    "description": "безкоштовно",
+    "category": "other",
+    "footer": "гривня ₴ долар $ євро € test test"
   }
 ]

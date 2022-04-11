@@ -49,5 +49,13 @@ export default {
     border-radius: 8px;
 
     padding: 5px 100px 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 860px) {
+    .inputs__select, 
+    .inputs__input {
+      width: 100%;
+    }
   }
 </style>

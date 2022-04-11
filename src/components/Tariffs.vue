@@ -55,9 +55,7 @@ export default {
 
   async created() {
     const response = await fetch('./tariffs.json');
-    console.log(response);
-    const data = await response.json()
-    console.log(data);
+    const data = await response.json();
     data.map(el => this.tariffs.push(el))
   }
 }
@@ -117,5 +115,23 @@ export default {
  .cards-enter,
  .cards-leave-to {
    opacity: 0;
+ }
+
+ @media (max-width: 1000px) {
+    .tariffs_table {
+      grid-template-columns: repeat(3, 1fr);
+    }
+ }
+
+ @media (max-width: 800px) {
+    .tariffs_table {
+      grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media (max-width: 500px) {
+    .tariffs_table {
+      grid-template-columns: repeat(1, 1fr);
+    }
  }
 </style>

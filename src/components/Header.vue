@@ -46,4 +46,10 @@ export default {
     font-weight: 700;
     line-height: 1.2;
   }
+
+  @media (max-width: 860px) {
+    .header {
+      flex-direction: column;
+    }
+  }
 </style>

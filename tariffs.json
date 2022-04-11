@@ -117,7 +117,7 @@
     "title": "оформлення віртуальної картки",
     "description": "безкоштовно",
     "category": "registration",
-    "footer": "гривня ₴ долар $ євро € ("registration" category)"
+    "footer": "гривня ₴ долар $ євро € ('registration' category)"
   },
   {
     "name": "Name",
@@ -125,6 +125,6 @@
     "title": "оформлення віртуальної картки",
     "description": "безкоштовно",
     "category": "other",
-    "footer": "гривня ₴ долар $ євро € ("other" category)"
+    "footer": "гривня ₴ долар $ євро € ('other' category)"
   }
 ]

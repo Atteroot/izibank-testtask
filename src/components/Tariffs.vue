@@ -37,19 +37,28 @@ export default {
 
   computed: {
     filterTariffs() {
-      return this.tariffs.filter(tariff => {
-        if (this.search != '') {
-          return tariff.title.includes(
-            this.search.length >= 3 ? this.search : ''
-          );
-        }
-        
-        if (this.select != 'all') {
+      //Filter if category and search not empty
+      if ((this.select !== 'all' && this.select !== '') && this.search.length >= 3) {
+        return this.tariffs.filter(tariff => {
+          return tariff.category.includes(this.select) && tariff.title.includes(this.search);
+        })
+      }
+      //Filter if category not empty and search is empty
+      else if ((this.select !== '' && this.select !== 'all') && this.search.length < 3) {
+        return this.tariffs.filter(tariff => {
           return tariff.category.includes(this.select);
-        } else {
-          return this.tariffs;
-        }
-      })
+        })
+      }
+      //Filter if category is empty/all and search not empty
+      else if ((this.select === '' || this.select === 'all') && this.search.length >= 3) {
+        return this.tariffs.filter(tariff => {
+          return tariff.title.includes(this.search);
+        })
+      }
+      // If category and search are empty
+      else {
+        return this.tariffs
+      }
     }
   },
 

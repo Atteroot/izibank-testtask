@@ -13,6 +13,9 @@
         <p>{{ tariff.footer }}</p>
       </div>
     </div>
+    <div class="not-found" v-if="filterTariffs.length === 0">
+      <p>Тарифів не знайдено!</p>
+    </div>
   </div>
 </template>
 
@@ -61,12 +64,6 @@ export default {
       }
     }
   },
-
-  // async mounted() {
-  //   const response = await fetch(asset());
-  //   const data = await response.json();
-  //   data.map(el => this.tariffs.push(el))
-  // }
 }
 </script>
 
@@ -124,6 +121,13 @@ export default {
  .cards-enter,
  .cards-leave-to {
    opacity: 0;
+ }
+
+ .not-found {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
  }
 
  @media (max-width: 1000px) {

@@ -5552,6 +5552,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
@@ -5591,12 +5594,7 @@ __webpack_require__.r(__webpack_exports__);
         return this.tariffs;
       }
     }
-  } // async mounted() {
-  //   const response = await fetch(asset());
-  //   const data = await response.json();
-  //   data.map(el => this.tariffs.push(el))
-  // }
-
+  }
 });
 
 /***/ }),
@@ -10795,7 +10793,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.tariffs_table {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n}\n.tariffs_table__card {\n  display: flex;\n  flex-direction: column;\n\n  background: #FFFFFF;\n\n  border: 1px solid #efe8e8;\n  border-radius: 8px;\n\n  padding: 12px;\n  height: 164px;\n  line-height: 22px;\n\n  margin: 0 15px 15px;\n}\n.card-description__title, \n.card-description__description {\n  font-family: Roboto;\n}\n.card-description__title {\n  font-size: 1rem;\n  font-weight: 400;\n  color: #ff5900;\n}\n.card-description__description {\n  font-size: 27px;\n  line-height: 27px;\n}\n.tariffs_table__card-footer {\n  font-family: Roboto;\n  font-weight: 100;\n  font-size: 16px;\n  font-weight: 18px;\n  margin-top: auto;\n}\n.cards-enter-active,\n.cards-leave-active {\n  transition: all 1s;\n}\n.cards-enter,\n.cards-leave-to {\n  opacity: 0;\n}\n@media (max-width: 1000px) {\n.tariffs_table {\n     grid-template-columns: repeat(3, 1fr);\n}\n}\n@media (max-width: 800px) {\n.tariffs_table {\n     grid-template-columns: repeat(2, 1fr);\n}\n}\n@media (max-width: 500px) {\n.tariffs_table {\n     grid-template-columns: repeat(1, 1fr);\n}\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.tariffs_table {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n}\n.tariffs_table__card {\n  display: flex;\n  flex-direction: column;\n\n  background: #FFFFFF;\n\n  border: 1px solid #efe8e8;\n  border-radius: 8px;\n\n  padding: 12px;\n  height: 164px;\n  line-height: 22px;\n\n  margin: 0 15px 15px;\n}\n.card-description__title, \n.card-description__description {\n  font-family: Roboto;\n}\n.card-description__title {\n  font-size: 1rem;\n  font-weight: 400;\n  color: #ff5900;\n}\n.card-description__description {\n  font-size: 27px;\n  line-height: 27px;\n}\n.tariffs_table__card-footer {\n  font-family: Roboto;\n  font-weight: 100;\n  font-size: 16px;\n  font-weight: 18px;\n  margin-top: auto;\n}\n.cards-enter-active,\n.cards-leave-active {\n  transition: all 1s;\n}\n.cards-enter,\n.cards-leave-to {\n  opacity: 0;\n}\n.not-found {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n@media (max-width: 1000px) {\n.tariffs_table {\n     grid-template-columns: repeat(3, 1fr);\n}\n}\n@media (max-width: 800px) {\n.tariffs_table {\n     grid-template-columns: repeat(2, 1fr);\n}\n}\n@media (max-width: 500px) {\n.tariffs_table {\n     grid-template-columns: repeat(1, 1fr);\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29334,24 +29332,36 @@ var render = function () {
   return _c(
     "div",
     { staticClass: "tariffs_table" },
-    _vm._l(_vm.filterTariffs, function (tariff) {
-      return _c("div", { key: tariff.id, staticClass: "tariffs_table__card" }, [
-        _c("div", { staticClass: "tariffs_table__card-description" }, [
-          _c("p", { staticClass: "card-description__title" }, [
-            _vm._v(_vm._s(tariff.title)),
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "card-description__description" }, [
-            _vm._v(_vm._s(tariff.description)),
-          ]),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "tariffs_table__card-footer" }, [
-          _c("p", [_vm._v(_vm._s(tariff.footer))]),
-        ]),
-      ])
-    }),
-    0
+    [
+      _vm._l(_vm.filterTariffs, function (tariff) {
+        return _c(
+          "div",
+          { key: tariff.id, staticClass: "tariffs_table__card" },
+          [
+            _c("div", { staticClass: "tariffs_table__card-description" }, [
+              _c("p", { staticClass: "card-description__title" }, [
+                _vm._v(_vm._s(tariff.title)),
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-description__description" }, [
+                _vm._v(_vm._s(tariff.description)),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "tariffs_table__card-footer" }, [
+              _c("p", [_vm._v(_vm._s(tariff.footer))]),
+            ]),
+          ]
+        )
+      }),
+      _vm._v(" "),
+      _vm.filterTariffs.length === 0
+        ? _c("div", { staticClass: "not-found" }, [
+            _c("p", [_vm._v("Тарифів не знайдено!")]),
+          ])
+        : _vm._e(),
+    ],
+    2
   )
 }
 var staticRenderFns = []
